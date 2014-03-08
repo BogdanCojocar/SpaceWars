@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html manifest = "tower_defense.manifest" lang = "en-US">
+<head>
+    <title> Multiplayer tower defense </title>
+    <meta charset = "UTF-8">
+    <meta name = "description" content = "Space multiplayer tower defense game in HTML5">
+    <meta name = "author" content = "Bogdan Cojocar">
+    <meta name = "keywords" content = "Space, Multiplayer, Tower defense, HTML5">
+    <link rel = "stylesheet" type = "text/css" href = "css/tower_defense.css">
+
+    <script src = "js/lib/jquery-2.0.3.min.js"></script>
+    <script src = "js/lib/Box2dWeb-2.1.a.3.min.js"></script>
+    
+    <script src = "js/Log.js"></script>
+    <script src = "js/Common.js"></script>
+    <script src = "js/LoadSprites.js"></script>
+    <script src = "js/HandleImage.js"></script>
+    <script src = "js/Explosion.js"></script>
+    <script src = "js/GamePhysics.js"></script>
+    <script src = "js/GameRendering.js"></script>
+    <script src = "js/SpaceObjects.js"></script>
+    <script src = "js/Human.js"></script>
+    <script src = "js/Alien.js"></script>
+    <script src = "js/AlienTower.js"></script>
+    <script src = "js/HumanTower.js"></script>
+    <script src = "js/Laser.js"></script>
+    <script src = "js/CalculateNextWave.js"></script>
+    <script src = "js/UserInput.js"></script>
+    <script src = "js/ColisionHandler.js"></script>
+    <script src = "js/Game.js"></script>
+</head>
+<body>
+	<div id = "container" class = "container">
+		<div id = "toppanel" class = "toppanel">
+			Space Wars
+			<button id = "sound" onclick="click_sound(event)" class = "soundbutton"> ♬ </button>
+		</div>
+		<div id = "sidepanel" class = "sidepannel">
+		  <div id = "score1" class = "score"> 0 </div>
+		  <div id = "optionct1" class = "optionct">
+		    <img onclick = "click_alien1(event)" src="sprites/alien_tower_1.png" width="40px" height="40px">
+		  </div>
+		  <div id = "optionct2" class = "optionct">
+		    <img onclick = "click_alien2(event)" src="sprites/alien_tower_2.png" width="40px" height="40px">
+		  </div>
+		  <div id = "optionct3" class = "optionct">
+		    <img onclick = "click_alien3(event)" src="sprites/alien_tower_3.png" width="40px" height="40px">
+		  </div>
+		  <div id = "optionct4" class = "optionct">
+		    <img onclick = "click_alien4(event)" src="sprites/alien_tower_4.png" width="40px" height="40px">
+		  </div>
+		  <hr>
+		  <div id = "aliens" class = "center">
+	    Aliens 
+	    </div>
+	    <div class = "center">
+      vs.
+      </div>
+      <div id = "humans" class = "center">
+      Humans
+      </div>
+		  <hr>
+		  <div id = "optionct5" class = "optionct">
+		    <img onclick = "click_human1(event)" src="sprites/human_tower_1.png" width="40px" height="40px">
+		  </div>
+		  <div id = "optionct6" class = "optionct">
+		    <img onclick = "click_human2(event)" src="sprites/human_tower_2.png" width="40px" height="40px">
+		  </div>
+		  <div id = "optionct7" class = "optionct">
+		    <img onclick = "click_human3(event)" src="sprites/human_tower_3.png" width="40px" height="40px">
+		  </div>
+		  <div id = "optionct8" class = "optionct">
+		    <img onclick = "click_human4(event)" src="sprites/human_tower_4.png" width="40px" height="40px">
+		  </div>
+		  <div id = "score2" class = "score"> 0 </div>
+		  <button id = "nextturn" onclick="changeTurn(event)" class = "nextturnbutton"> Next turn </button>
+		</div>
+		<canvas id = "canvas"></canvas>
+		<audio id = "background_music">
+		  <source src = "sounds/background_music.mp3" type = "audio/mp3"></source>
+		</audio>
+		<audio id = "new_turn">
+		  <source src = "sounds/new_turn.mp3" type = "audio/mp3"></source>
+		</audio>
+	</div>
+</body>
+</html>
