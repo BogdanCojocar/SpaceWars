@@ -1,0 +1,27 @@
+CACHE MANIFEST
+# v1 
+
+CACHE:
+index.html
+opensans.ttf
+
+# java script
+js/lib/Box2D.min.js
+js/lib/jquery-2.0.3.min.js
+
+# css
+css/tower_defensse.css
+
+# sprites
+sprites/level_background1.png
+sprites/level_background2.png
+sprites/level_background3.png
+sprites/level_background4.png
+sprites/sprites.png
+sprites/sprites.json
+
+# sounds
+
+# Resources that require the user to be online.
+NETWORK:
+*
